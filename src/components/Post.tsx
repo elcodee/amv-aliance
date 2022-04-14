@@ -21,7 +21,7 @@ export default function Post() {
         style={{ marginTop: -100, marginBottom: 10 }}
       >
         <div className="container">
-          <div className="row wow fadeIn">
+          <div className="row">
             {/* Left column */}
             <div className="col-md-6">
               <div className="heading heading-md heading-uppercase heading-hover">
@@ -48,15 +48,8 @@ export default function Post() {
         {/* /.container */}
         <div className="container-fluid no-padding" style={{ marginTop: -100 }}>
           <div className="isotope popup-gallery col-4">
-            {/* Begin isotope filter 
-						=========================== */}
             <div
-              className="isotope-filter wow fadeIn"
-              data-wow-delay="0.8s"
-            ></div>
-            <div
-              className="isotope-items-wrap wow fadeIn"
-              data-wow-delay="0.4s"
+              className="isotope-items-wrap "
             >
               {/* Grid sizer (do not remove!!!) */}
               <div className="grid-sizer" />

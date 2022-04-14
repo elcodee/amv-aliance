@@ -1,17 +1,14 @@
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import About from "../components/About";
-import Cta from "../components/Cta";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Intro from "../components/Intro";
 import Post from "../components/Post";
-import SlidingBar from "../components/SlidingBar";
-import { getDetail, saveUserInfo } from "../req/detail";
+import { getDetail } from "../req/detail";
 
 function Landing() {
   const [ip, setIp] = useState<any>();
-  const [userInfo, setUserInfo] = useState<any>();
 
   let nAgt = navigator.userAgent;
   let browserName = navigator.appName;
