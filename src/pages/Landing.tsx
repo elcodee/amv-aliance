@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import About from "../components/About";
+import Article from "../components/Article";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Intro from "../components/Intro";
@@ -160,7 +161,8 @@ function Landing() {
         <About />
 
         {/* Post */}
-        <Post />
+        {/* <Post /> */}
+        <Article />
 
         {/* Footer */}
         <Footer />

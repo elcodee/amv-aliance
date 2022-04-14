@@ -23,8 +23,7 @@ export default function About() {
       {/* /.container */}
       <div className="container margin-top-20">
         <div className="row">
-          <div className="col-sm-6 col-md-3">
-            {/* Begin info box-1 */}
+          {/* <div className="col-sm-6 col-md-3">
             <div className="info-box info-box-1">
               <span className="info-box-icon">
                 <i className="fas fa-clone" />
@@ -37,11 +36,12 @@ export default function About() {
                 </p>
               </div>
             </div>
-            {/* End info box-1 */}
-          </div>
+          </div> */}
           {/* /.col */}
-          <div className="col-sm-6 col-md-3">
-            {/* Begin info box-1 */}
+          {/* /.col */}
+          {/* /.col */}
+          {/* /.col */}v
+          {/* <div className="col-sm-6 col-md-3">
             <div className="info-box info-box-1">
               <span className="info-box-icon">
                 <i className="fas fa-bicycle" />
@@ -54,8 +54,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-            {/* End info box-1 */}
-          </div>{" "}
+          </div>{" "} */}
           {/* /.col */}
         </div>{" "}
         {/* /.row */}

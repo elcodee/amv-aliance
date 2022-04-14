@@ -9,10 +9,24 @@ import {
   ModalOverlay,
   useDisclosure,
 } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+import { getAllPost } from "../req/post";
 
 export default function Post() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [post, setPost] = useState<any>([]);
 
+  const getPost = async () => {
+    let res: any = await getAllPost();
+
+    if (res) {
+      setPost(res);
+    }
+  };
+
+  useEffect(() => {
+    getPost();
+  }, []);
   return (
     <>
       <section
@@ -46,63 +60,83 @@ export default function Post() {
           {/* /.row */}
         </div>{" "}
         {/* /.container */}
-        <div className="container-fluid no-padding" style={{ marginTop: -100 }}>
+        <div className="container-fluid no-padding" style={{ marginTop: -50 }}>
           <div className="isotope popup-gallery col-4">
-            <div
-              className="isotope-items-wrap "
-            >
+            <div className="isotope-items-wrap ">
               {/* Grid sizer (do not remove!!!) */}
               <div className="grid-sizer" />
               {/* //////////////////
 							// Begin isotope item. Note: use class "width2" for alternative item width (works best on first item)
 							/////////////////////// */}
 
-              <div className="isotope-item photography">
-                {/* Begin portfolio item */}
-                <div className="portfolio-item-wrap">
-                  <div className="portfolio-item">
-                    <a
-                      className="item-link inline-popup-trigger"
-                      onClick={onOpen}
-                    >
-                      <span className="cover bg-transparent-9-main" />
-                      <img
-                        className="item-img"
-                        src="https://demo.themetorium.net/html/asso/v.1.4/theme/assets/img/portfolio/v.2/portfolio-img-1.jpg"
-                        alt="image"
-                      />
-                      <div className="item-info text-white">
-                        <h3 className="item-info-title">Penipu DM Hujan</h3>
-                        <p className="item-info-text">300k</p>
-                      </div>
-                    </a>
-                  </div>
+              {post
+                ? post.map((item: any, index: any) => {
+                    console.log("ITEM : ", item);
 
-                  {/* MODAL */}
-                  <Modal
-                    closeOnOverlayClick={false}
-                    onClose={onClose}
-                    isOpen={isOpen}
-                  >
-                    <ModalOverlay />
-                    <ModalContent
-                      style={{ marginTop: 20, minWidth: 350, padding: 10 }}
-                    >
-                      <ModalHeader>Penipu DM Hujan</ModalHeader>
-                      <ModalBody>
-                        <h4>ewnfoinewfoineiofonqofeifwn</h4>
-                      </ModalBody>
-                      <ModalFooter>
-                        <Button onClick={onClose}>Close</Button>
-                      </ModalFooter>
-                    </ModalContent>
-                  </Modal>
-                </div>
-                {/* End portfolio item */}
-                {/* End portfolio item */}
-                {/* End portfolio item */}
-                {/* End portfolio item */}
-              </div>
+                    return (
+                      <div className="isotope-item photography" key={index + 1}>
+                        {/* Begin portfolio item */}
+                        <div className="portfolio-item-wrap">
+                          <div className="portfolio-item">
+                            <a
+                              className="item-link inline-popup-trigger"
+                              onClick={onOpen}
+                            >
+                              <span className="cover bg-transparent-9-main" />
+                              <div
+                                style={{
+                                  alignSelf: "center",
+                                }}
+                              >
+                                <img
+                                  className="item-img"
+                                  src={item.cover[0].url}
+                                  alt={item.title}
+                                />
+                              </div>
+
+                              <div className="item-info text-white">
+                                <h3 className="item-info-title">
+                                  {item.title}
+                                </h3>
+                                {/* <p className="item-info-text">300k</p> */}
+                              </div>
+                            </a>
+                          </div>
+
+                          {/* MODAL */}
+                          <Modal
+                            closeOnOverlayClick={false}
+                            onClose={onClose}
+                            isOpen={isOpen}
+                          >
+                            <ModalOverlay />
+                            <ModalContent
+                              style={{
+                                marginTop: 80,
+                                minWidth: 350,
+                                padding: 10,
+                              }}
+                            >
+                              <ModalHeader>Penipu DM Hujan</ModalHeader>
+                              <ModalBody>
+                                <h4>ewnfoinewfoineiofonqofeifwn</h4>
+                              </ModalBody>
+                              <ModalFooter>
+                                <Button onClick={onClose}>Close</Button>
+                              </ModalFooter>
+                            </ModalContent>
+                          </Modal>
+                        </div>
+                        {/* End portfolio item */}
+                        {/* End portfolio item */}
+                        {/* End portfolio item */}
+                        {/* End portfolio item */}
+                      </div>
+                    );
+                  })
+                : null}
+
               {/* End isotope item */}
             </div>
             {/* End isotope items wrap */}
