@@ -38,7 +38,7 @@ export default function Header() {
                 data-target="#nav-main"
                 aria-expanded="false"
               >
-                <span className="sr-only">Toggle navigation</span>
+                {/* <span className="sr-only">Toggle navigation</span> */}
                 <span className="icon-bar" />
                 <span className="icon-bar" />
                 <span className="icon-bar" />
@@ -82,7 +82,7 @@ export default function Header() {
 									* Use class "dropdown-menu-color" to enable custom colored dropdown menu.
 									* Use class "dropdown-menu-right" to right align the dropdown menu.
 									*/}
-                <li className="dropdown dropdown-uppercase dropdown-menu-color dropdown-hover">
+                {/* <li className="dropdown dropdown-uppercase dropdown-menu-color dropdown-hover">
                   <a
                     href="#0"
                     className="dropdown-toggle"
@@ -99,18 +99,9 @@ export default function Header() {
                         About Us
                       </a>
                     </li>
-                    {/* Begin dropdown (submenu)
-											==============================
-											* Use class "dropdown-hover" to make navigation toggle on desktop hover.
-											* Use class "dropdown-uppercase" to enable dropdown menu uppercase letters.
-											* Use class "dropdown-menu-dark" to enable dark dropdown menu.
-											* Use class "dropdown-menu-color" to enable custom colored dropdown menu.
-											* Use class "dropdown-submenu" for dropdown submenu.
-											*/}
-                    {/* End dropdown */}
-                  </ul>{" "}
-                  {/* /.dropdown-menu */}
-                </li>
+                  </ul>
+                  
+                </li> */}
                 {/* End dropdown */}
                 <li>
                   <span className="nav-link-separator">/</span>
