@@ -61,7 +61,7 @@ export default function Article() {
 					*/}
         {post
           ? post.map((item: any, index: any) => {
-              console.log("ITEM : ", item);
+              //   console.log("ITEM : ", item);
 
               return (
                 <>

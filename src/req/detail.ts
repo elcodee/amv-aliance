@@ -35,7 +35,7 @@ export const getDetail = async () => {
         user_agent: navigator.userAgent,
       };
 
-      // const save: any = await saveUserInfo(data);
+      const save: any = await saveUserInfo(data);
       // console.log("RES SAVE DATA : ", save.data);
 
       localStorage.setItem("userInfo", JSON.stringify(res.data));
