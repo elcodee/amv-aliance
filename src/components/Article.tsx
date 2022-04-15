@@ -149,6 +149,9 @@ export default function Article() {
                               <b>ID LM :</b> {item.id_lm}
                             </Text>
                           </li>
+				  <br />
+                          <hr />
+                          <br />
                           <li>
                             <Text fontSize="2xl">
                               <b>Username Korban :</b> {item.username_korban}
