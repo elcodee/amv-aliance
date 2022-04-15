@@ -14,11 +14,11 @@ export default function About() {
         title: `
         Total Pengunjung ${res.length.toString()}
        `,
-        position: "bottom",
+        position: "top",
         isClosable: true,
         variant: "top-accent",
         containerStyle: {
-          marginBottom: 25,
+          marginTop: 60,
         },
       });
     }
