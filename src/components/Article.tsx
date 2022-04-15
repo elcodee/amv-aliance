@@ -176,7 +176,7 @@ export default function Article() {
                           src={
                             item?.img_1[0]?.url
                               ? item?.img_1[0]?.url
-                              : `https://thumbs.dreamstime.com/b/proof-icon-evidence-174724921.jpg`
+                              : ``
                           }
                           alt={item.title}
                           style={{ marginBottom: -150, maxHeight: 550 }}
@@ -187,7 +187,7 @@ export default function Article() {
                           src={
                             item?.img_2[0]
                               ? item?.img_2[0]?.url
-                              : `https://thumbs.dreamstime.com/b/proof-icon-evidence-174724921.jpg`
+                              : ``
                           }
                           alt={item.title}
                           style={{ marginBottom: -150, maxHeight: 550 }}
@@ -198,7 +198,7 @@ export default function Article() {
                           src={
                             item?.img_3
                               ? item?.img_3[0]?.url
-                              : `https://thumbs.dreamstime.com/b/proof-icon-evidence-174724921.jpg`
+                              : ``
                           }
                           alt={item.title}
                           style={{ marginBottom: -150, maxHeight: 550 }}
@@ -209,7 +209,7 @@ export default function Article() {
                           src={
                             item?.img_4
                               ? item?.img_4[0]?.url
-                              : `https://thumbs.dreamstime.com/b/proof-icon-evidence-174724921.jpg`
+                              : ``
                           }
                           alt={item.title}
                           style={{ marginBottom: -150, maxHeight: 550 }}
@@ -220,7 +220,7 @@ export default function Article() {
                           src={
                             item?.img_5
                               ? item?.img_5[0]?.url
-                              : `https://thumbs.dreamstime.com/b/proof-icon-evidence-174724921.jpg`
+                              : ``
                           }
                           alt={item.title}
                           style={{ marginBottom: -150, maxHeight: 550 }}
