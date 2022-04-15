@@ -28,7 +28,11 @@ export default function Article() {
     getPost();
   }, []);
   return (
-    <section id="section-6" className="blog-section padding-top-100">
+    <section
+      id="section-6"
+      className="blog-section padding-top-100"
+      style={{ marginTop: -180 }}
+    >
       <div className="container">
         <div className="row">
           {/* Left column */}
@@ -147,6 +151,16 @@ export default function Article() {
                           </li>
                           <li>
                             <Text fontSize="2xl">
+                              <b>Username Korban :</b> {item.username_korban}
+                            </Text>
+                          </li>
+                          <li>
+                            <Text fontSize="2xl">
+                              <b>ID LM Korban :</b> {item.id_korban}
+                            </Text>
+                          </li>
+                          <li>
+                            <Text fontSize="2xl">
                               <b>Kronologi :</b> {item.desc}
                             </Text>
                           </li>
@@ -200,9 +214,27 @@ export default function Article() {
                           alt={item.title}
                           style={{ marginBottom: -150, maxHeight: 550 }}
                         />
+                        <hr /> <br />
+                        <img
+                          className="bco blog-list-image bg-image"
+                          src={
+                            item?.img_5
+                              ? item?.img_5[0]?.url
+                              : `https://thumbs.dreamstime.com/b/proof-icon-evidence-174724921.jpg`
+                          }
+                          alt={item.title}
+                          style={{ marginBottom: -150, maxHeight: 550 }}
+                        />
+                        <hr /> <br />
+                        <img
+                          className="bco blog-list-image bg-image"
+                          src={item?.img_6 ? item?.img_6[0]?.url : ``}
+                          alt={item.title}
+                          style={{ marginBottom: -150, maxHeight: 550 }}
+                        />
                       </ModalBody>
                       <ModalFooter>
-                        <Button onClick={onClose}>Close</Button>
+                        <Button onClick={onClose}>Tutup</Button>
                       </ModalFooter>
                     </ModalContent>
                   </Modal>
