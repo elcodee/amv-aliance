@@ -67,8 +67,13 @@ export default function Header() {
 								*/}
               <ul className="nav navbar-nav navbar-right nav-pills">
                 <li className="active">
-                  <a className="mlc sm-scroll" href="#!">
+                  <a className="mlc sm-scroll" href="/">
                     Home
+                  </a>
+                </li>
+                <li className="active">
+                  <a className="mlc sm-scroll" href="/upload">
+                    Upload
                   </a>
                 </li>
                 <li>

@@ -40,7 +40,7 @@ export default function About() {
           {/* /.col */}
           {/* /.col */}
           {/* /.col */}
-          {/* /.col */}v
+          {/* /.col */}
           {/* <div className="col-sm-6 col-md-3">
             <div className="info-box info-box-1">
               <span className="info-box-icon">
