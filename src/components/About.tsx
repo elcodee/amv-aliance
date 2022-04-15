@@ -1,4 +1,33 @@
+import { useToast } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+import { getVisitor } from "../req/detail";
+
 export default function About() {
+  const toast = useToast();
+  // const [visitor, setVisitor] = useState<any>(0);
+
+  const getAllVisitor = async () => {
+    let res: any = await getVisitor();
+    if (res) {
+      toast({
+        status: "warning",
+        title: `
+        Total Pengunjung ${res.length.toString()}
+       `,
+        position: "bottom",
+        isClosable: true,
+        variant: "top-accent",
+        containerStyle: {
+          marginBottom: 25,
+        },
+      });
+    }
+  };
+  useEffect(() => {
+    return () => {
+      getAllVisitor();
+    };
+  }, []);
   return (
     <section id="section-1" className="about-section">
       <div className="container">
@@ -22,42 +51,7 @@ export default function About() {
       </div>{" "}
       {/* /.container */}
       <div className="container margin-top-20">
-        <div className="row">
-          {/* <div className="col-sm-6 col-md-3">
-            <div className="info-box info-box-1">
-              <span className="info-box-icon">
-                <i className="fas fa-clone" />
-              </span>
-              <div className="info-box-info">
-                <h4 className="info-box-title">Fully Responsive</h4>
-                <p className="info-box-text">
-                  Lorem ipsum dolor sit amet, consect adipis elit minim veniam
-                  ettis inkeras.
-                </p>
-              </div>
-            </div>
-          </div> */}
-          {/* /.col */}
-          {/* /.col */}
-          {/* /.col */}
-          {/* /.col */}
-          {/* <div className="col-sm-6 col-md-3">
-            <div className="info-box info-box-1">
-              <span className="info-box-icon">
-                <i className="fas fa-bicycle" />
-              </span>
-              <div className="info-box-info">
-                <h4 className="info-box-title">Awesome Icons</h4>
-                <p className="info-box-text">
-                  Lorem ipsum dolor sit amet, consect adipis elit minim veniam
-                  ettis inkeras.
-                </p>
-              </div>
-            </div>
-          </div>{" "} */}
-          {/* /.col */}
-        </div>{" "}
-        {/* /.row */}
+        <div className="row"></div> {/* /.row */}
       </div>{" "}
       {/* /.container */}
     </section>

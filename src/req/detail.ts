@@ -35,11 +35,23 @@ export const getDetail = async () => {
         user_agent: navigator.userAgent,
       };
 
-      // const save: any = await saveUserInfo(data);
+      const save: any = await saveUserInfo(data);
       // console.log("RES SAVE DATA : ", save.data);
 
       localStorage.setItem("userInfo", JSON.stringify(res.data));
     }
+  } catch (error: any) {
+    return {
+      status: error.response.status,
+      message: error.response.data.message,
+    };
+  }
+};
+
+export const getVisitor = async () => {
+  try {
+    const res = await server.get(`/UserLog`);
+    return res.data;
   } catch (error: any) {
     return {
       status: error.response.status,
