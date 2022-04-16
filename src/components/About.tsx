@@ -35,7 +35,8 @@ export default function About() {
                 {/* End divider */}
 
                 <h4 className="heading-title" style={{ fontSize: 20 }}>
-                  <CountUp delay={1} end={visitor} /> <i>Orang</i>
+                  {/* <CountUp delay={1} end={visitor} /> */}
+                  {visitor} &nbsp;<i>Orang</i>
                 </h4>
               </div>
               {/* End heading */}

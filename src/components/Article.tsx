@@ -49,8 +49,11 @@ export default function Article() {
           {/* Right column */}
           <div className="col-md-6">
             <p className="lead">
-              <strong>Information</strong> Sebuah kumpulan bukti dari prilaku
-              seseorang yang kurang berakal sehat.
+              <strong>
+                {" "}
+                Sebuah kumpulan bukti dari prilaku seseorang yang kurang berakal
+                sehat.
+              </strong>
             </p>
           </div>{" "}
           {/* /.col */}
@@ -58,7 +61,7 @@ export default function Article() {
         {/* /.row */}
       </div>{" "}
       {/* /.container */}
-      <div className="container">
+      <div className="container" style={{ marginTop: -50 }}>
         {/* Begin blog list
 					=====================
 					* Use class "blog-list-classic" to enable classic blog list layout.
