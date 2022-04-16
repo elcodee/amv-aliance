@@ -9,9 +9,11 @@ export default function About() {
     let res: any = await getVisitor();
     if (res) {
       const countStr = res.length + 700;
-      setVisitor(countStr);
+      setVisitor(countStr.toString());
     }
   };
+
+  console.log("VISIT : ", visitor);
 
   useEffect(() => {
     return () => {

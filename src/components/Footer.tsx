@@ -8,7 +8,7 @@ export default function Footer() {
               <a href="#">AMV Aliance 2022 Allrights Reserved.</a>
               <p>
                 &copy; 2022 code by{" "}
-                <a href="https://s.id/ra-member" target="tab">
+                <a href="https://s.id/circle-ra" target="tab">
                   𓂀 › lil ҽӀ
                 </a>
               </p>
