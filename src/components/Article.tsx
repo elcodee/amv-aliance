@@ -31,7 +31,7 @@ export default function Article() {
     <section
       id="section-6"
       className="blog-section padding-top-100"
-      style={{ marginTop: -180 }}
+      style={{ marginTop: -130 }}
     >
       <div className="container">
         <div className="row">
@@ -50,9 +50,7 @@ export default function Article() {
           <div className="col-md-6">
             <p className="lead">
               <strong>
-                {" "}
-                Sebuah kumpulan bukti dari prilaku seseorang yang kurang berakal
-                sehat.
+                Kami berikan panggung untuk kelakuan anda yang kampungan.
               </strong>
             </p>
           </div>{" "}
