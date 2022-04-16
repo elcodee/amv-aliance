@@ -59,37 +59,39 @@ export default function Article() {
         {/* /.row */}
       </div>{" "}
       {/* /.container */}
-      <div className="container" style={{ marginTop: -50 }}>
-        {/* Begin blog list
+      {/* Begin blog list
 					=====================
 					* Use class "blog-list-classic" to enable classic blog list layout.
 					*/}
-        {post
-          ? post.map((item: any, index: any) => {
-              //   console.log("ITEM : ", item);
-
-              return (
-                <>
-                  <div className="blog-list margin-top-80" key={index + 1}>
+      {post
+        ? post.map((item: any, index: any) => {
+            return (
+              <>
+                <div className="container" style={{ marginTop: -50 }}>
+                  <div className="blog-list margin-top-80">
                     <div className="blog-wrap">
                       {/* Begin blog list item 1 
 							============================ */}
                       <div className="blog-list-item row">
                         {/* Left column */}
-                        <div
+                        <a
                           className="col col-md-6 no-padding"
-                          onClick={onOpen}
+                          href={`/detail-post/${item._id}`}
                         >
+                          {/* <h1>{item._id}</h1> */}
                           <img
                             className="bco blog-list-image bg-image"
                             src={item.cover[0].url}
                             alt={item.title}
                             style={{ marginBottom: -200, maxHeight: 600 }}
                           />
-                        </div>
+                        </a>
                         {/* /.col */}
                         {/* Right column */}
-                        <div className="col col-md-6 no-padding">
+                        <a
+                          className="col col-md-6 no-padding"
+                          href={`/detail-post/${item._id}`}
+                        >
                           <div className="bco blog-list-info">
                             <h2 className="blog-list-title">
                               <a onClick={onOpen} title="Aenean Odio Metus">
@@ -107,20 +109,21 @@ export default function Article() {
                             </div>
                             <p className="blog-list-desc">{item.desc}</p>
                           </div>
-                        </div>{" "}
+                        </a>{" "}
                         {/* /.col */}
                       </div>
                       {/* End blog list item 4 */}
                     </div>{" "}
                     {/* /.blog-wrap */}
                   </div>
+                </div>
 
-                  {/* MODAL */}
+                {/* MODAL */}
+                {/* {index + 1 === item.sort && (
                   <Modal
                     closeOnOverlayClick={false}
                     onClose={onClose}
-                    isOpen={isOpen}
-                    key={index + 1}
+                    // isOpen={isOpen}
                   >
                     <ModalOverlay />
                     <ModalContent
@@ -223,13 +226,12 @@ export default function Article() {
                       </ModalFooter>
                     </ModalContent>
                   </Modal>
-                </>
-              );
-            })
-          : null}
-
-        {/* End blog-list */}
-      </div>{" "}
+                )} */}
+              </>
+            );
+          })
+        : null}
+      {/* End blog-list */}
       {/* /.container */}
     </section>
   );

@@ -16,3 +16,15 @@ export const getAllPost = async () => {
     };
   }
 };
+
+export const getPostByID = async (id: any) => {
+  try {
+    const res = await client.get(`/Post/${id}`);
+    return res.data;
+  } catch (error: any) {
+    return {
+      status: error.response.status,
+      message: error.response.data.message,
+    };
+  }
+};

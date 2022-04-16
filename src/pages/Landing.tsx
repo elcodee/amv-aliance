@@ -155,14 +155,10 @@ function Landing() {
         {/* Intro */}
         <Intro />
 
-        {/* CTA */}
-        {/* <Cta /> */}
-
         {/* About */}
         <About />
 
         {/* Post */}
-        {/* <Post /> */}
         <Article />
 
         {/* Footer */}
