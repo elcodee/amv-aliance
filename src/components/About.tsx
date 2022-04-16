@@ -8,7 +8,7 @@ export default function About() {
   const getAllVisitor = async () => {
     let res: any = await getVisitor();
     if (res) {
-      const countStr = res.length + 700;
+      const countStr = res.length + 1026;
       setVisitor(countStr.toString());
     }
   };
