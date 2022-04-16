@@ -7,7 +7,7 @@ const client = axios.create({
 
 export const getAllPost = async () => {
   try {
-    const res = await client.get(`/Post`);
+    const res = await client.get(`/Post?$sort[sort]=-1`);
     return res.data;
   } catch (error: any) {
     return {

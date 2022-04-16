@@ -120,6 +120,7 @@ export default function Article() {
                     closeOnOverlayClick={false}
                     onClose={onClose}
                     isOpen={isOpen}
+                    key={index + 1}
                   >
                     <ModalOverlay />
                     <ModalContent
@@ -177,55 +178,35 @@ export default function Article() {
                         <br />
                         <img
                           className="bco blog-list-image bg-image"
-                          src={
-                            item?.img_1[0]?.url
-                              ? item?.img_1[0]?.url
-                              : `https://thumbs.dreamstime.com/b/proof-icon-evidence-174724921.jpg`
-                          }
+                          src={item?.img_1 ? item?.img_1[0]?.url : ``}
                           alt={item.title}
                           style={{ marginBottom: -150, maxHeight: 550 }}
                         />
                         <hr /> <br />
                         <img
                           className="bco blog-list-image bg-image"
-                          src={
-                            item?.img_2[0]
-                              ? item?.img_2[0]?.url
-                              : `https://thumbs.dreamstime.com/b/proof-icon-evidence-174724921.jpg`
-                          }
+                          src={item?.img_2 ? item?.img_2[0]?.url : ``}
                           alt={item.title}
                           style={{ marginBottom: -150, maxHeight: 550 }}
                         />
                         <hr /> <br />
                         <img
                           className="bco blog-list-image bg-image"
-                          src={
-                            item?.img_3
-                              ? item?.img_3[0]?.url
-                              : `https://thumbs.dreamstime.com/b/proof-icon-evidence-174724921.jpg`
-                          }
+                          src={item?.img_3 ? item?.img_3[0]?.url : ``}
                           alt={item.title}
                           style={{ marginBottom: -150, maxHeight: 550 }}
                         />
                         <hr /> <br />
                         <img
                           className="bco blog-list-image bg-image"
-                          src={
-                            item?.img_4
-                              ? item?.img_4[0]?.url
-                              : `https://thumbs.dreamstime.com/b/proof-icon-evidence-174724921.jpg`
-                          }
+                          src={item?.img_4 ? item?.img_4[0]?.url : ``}
                           alt={item.title}
                           style={{ marginBottom: -150, maxHeight: 550 }}
                         />
                         <hr /> <br />
                         <img
                           className="bco blog-list-image bg-image"
-                          src={
-                            item?.img_5
-                              ? item?.img_5[0]?.url
-                              : `https://thumbs.dreamstime.com/b/proof-icon-evidence-174724921.jpg`
-                          }
+                          src={item?.img_5 ? item?.img_5[0]?.url : ``}
                           alt={item.title}
                           style={{ marginBottom: -150, maxHeight: 550 }}
                         />

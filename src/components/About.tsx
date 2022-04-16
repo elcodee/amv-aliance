@@ -13,8 +13,6 @@ export default function About() {
     }
   };
 
-  console.log("VISIT : ", visitor);
-
   useEffect(() => {
     getAllVisitor();
   }, [visitor]);
