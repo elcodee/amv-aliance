@@ -16,9 +16,7 @@ export default function About() {
   console.log("VISIT : ", visitor);
 
   useEffect(() => {
-    return () => {
-      getAllVisitor();
-    };
+    getAllVisitor();
   }, [visitor]);
   return (
     <>
