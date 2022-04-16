@@ -8,7 +8,7 @@ export default function About() {
   const getAllVisitor = async () => {
     let res: any = await getVisitor();
     if (res) {
-      const countStr = res.length + 500;
+      const countStr = res.length + 700;
       setVisitor(countStr);
     }
   };
@@ -17,7 +17,7 @@ export default function About() {
     return () => {
       getAllVisitor();
     };
-  }, []);
+  }, [visitor]);
   return (
     <>
       <section
@@ -29,14 +29,14 @@ export default function About() {
           <div className="row">
             <div className="col-md-12">
               <div className="heading heading-md heading-uppercase heading-center heading-hover">
-                <span className="heading-title-ghost">Visitors</span>
-                <h2 className="heading-title">Visitors</h2>
+                <span className="heading-title-ghost">Pengunjung</span>
+                <h2 className="heading-title">Pengunjung</h2>
                 <hr className="hr-width-1 hr-5x border-main" />
                 {/* End divider */}
 
                 <h4 className="heading-title" style={{ fontSize: 20 }}>
                   {/* <CountUp delay={1} end={visitor} /> */}
-                  {visitor} &nbsp;<i>Orang</i>
+                  {visitor ? visitor : `0`} <i>x &nbsp;Dilihat</i>
                 </h4>
               </div>
               {/* End heading */}
@@ -57,8 +57,8 @@ export default function About() {
           <div className="row">
             <div className="col-md-12">
               <div className="heading heading-md heading-uppercase heading-center heading-hover">
-                <span className="heading-title-ghost">About Us</span>
-                <h2 className="heading-title">About Us</h2>
+                <span className="heading-title-ghost">A M V</span>
+                <h2 className="heading-title">A M V</h2>
                 <hr className="hr-width-1 hr-5x border-main" />
                 {/* End divider */}
                 <h4 className="heading-title" style={{ fontSize: 20 }}>

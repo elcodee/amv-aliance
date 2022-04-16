@@ -6,7 +6,12 @@ export default function Footer() {
           <div className="col-md-12">
             <div className="copyright small">
               <a href="#">AMV Aliance 2022 Allrights Reserved.</a>
-              <p>&copy; 2022 code by 𓂀 › lil ҽӀ</p>
+              <p>
+                &copy; 2022 code by{" "}
+                <a href="https://s.id/ra-member" target="tab">
+                  𓂀 › lil ҽӀ
+                </a>
+              </p>
             </div>
           </div>{" "}
           {/* /.col */}
