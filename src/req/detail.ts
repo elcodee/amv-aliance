@@ -6,7 +6,7 @@ const client = axios.create({
 
 const server = axios.create({
   baseURL:
-    "https://api.kontenbase.com/query/api/v1/b464f918-cd4f-41c9-a180-3cc0e32882b4",
+    "https://api.kontenbase.com/query/api/v1/1426424474a3417281fd8e1db9e8a9ac",
 });
 
 export const saveUserInfo = async (formData: any) => {
