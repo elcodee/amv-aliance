@@ -10,6 +10,7 @@ export default function DetailPosting() {
   const getPost = async () => {
     let res: any = await getPostByID(idlm);
     if (res) {
+      // console.log("RES : ", res);
       setData(res);
     }
   };
@@ -69,42 +70,42 @@ export default function DetailPosting() {
               <br />
               <img
                 className="bco blog-list-image bg-image"
-                src={data?.img_1 ? data?.img_1[0]?.url : ``}
+                src={data?.img_1 ? data?.img_1 : ``}
                 alt={data.title}
                 style={{ marginBottom: -150, maxHeight: 550 }}
               />
               <hr /> <br />
               <img
                 className="bco blog-list-image bg-image"
-                src={data?.img_2 ? data?.img_2[0]?.url : ``}
+                src={data?.img_2 ? data?.img_2 : ``}
                 alt={data.title}
                 style={{ marginBottom: -150, maxHeight: 550 }}
               />
               <hr /> <br />
               <img
                 className="bco blog-list-image bg-image"
-                src={data?.img_3 ? data?.img_3[0]?.url : ``}
+                src={data?.img_3 ? data?.img_3 : ``}
                 alt={data.title}
                 style={{ marginBottom: -150, maxHeight: 550 }}
               />
               <hr /> <br />
               <img
                 className="bco blog-list-image bg-image"
-                src={data?.img_4 ? data?.img_4[0]?.url : ``}
+                src={data?.img_4 ? data?.img_4 : ``}
                 alt={data.title}
                 style={{ marginBottom: -150, maxHeight: 550 }}
               />
               <hr /> <br />
               <img
                 className="bco blog-list-image bg-image"
-                src={data?.img_5 ? data?.img_5[0]?.url : ``}
+                src={data?.img_5 ? data?.img_5 : ``}
                 alt={data.title}
                 style={{ marginBottom: -150, maxHeight: 550 }}
               />
               <hr /> <br />
               <img
                 className="bco blog-list-image bg-image"
-                src={data?.img_6 ? data?.img_6[0]?.url : ``}
+                src={data?.img_6 ? data?.img_6 : ``}
                 alt={data.title}
                 style={{ marginBottom: -150, maxHeight: 550 }}
               />

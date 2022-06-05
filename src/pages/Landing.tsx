@@ -97,29 +97,7 @@ function Landing() {
         allowOutsideClick: false,
         title: "Detail Info anda",
         confirmButtonColor: "#003153",
-        // html: `
-        // <b>Alamat IP : </b> ${ip?.ip_address} <br /><br />
-        // <b>Koneksi VPN : </b> ${
-        //   ip?.security?.is_vpn ? `YA` : `TIDAK`
-        // } <br /><br />
-        // <b>Kota : </b> ${ip?.region},  ${ip?.country}<br /><br />
-        // <b>Waktu : </b> ${ip?.timezone?.current_time}  ${
-        //   ip?.timezone?.abbreviation
-        // }<br /><br />
-        // <b>Provider : </b> ${ip?.connection?.isp_name}  |  ${
-        //   ip?.connection?.organization_name
-        // }<br /><br />
-        // <b>Waktu : </b> ${ip?.timezone?.current_time}  ${
-        //   ip?.timezone?.abbreviation
-        // }<br /><br />
-        // <b>Browser : </b> ${browserName}<br /><br />
-        // <b>User Agent : </b> ${navigator.userAgent}<br />
-        // `,
         html: `
-        <b>Kota : </b> ${ip?.region},  ${ip?.country}<br /><br />
-        <b>Provider : </b> ${ip?.connection?.isp_name}  |  ${ip?.connection?.organization_name}<br /><br />
-        <b>Waktu : </b> ${ip?.timezone?.current_time}  ${ip?.timezone?.abbreviation}<br /><br />
-        <b>Browser : </b> ${browserName}<br /><br />
         <b>User Agent : </b> ${navigator.userAgent}<br />
         `,
       });

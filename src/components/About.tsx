@@ -8,7 +8,7 @@ export default function About() {
   const getAllVisitor = async () => {
     let res: any = await getVisitor();
     if (res) {
-      const countStr = res.length + 1118;
+      const countStr = res.length + 700;
       setVisitor(countStr.toString());
     }
   };
@@ -33,8 +33,8 @@ export default function About() {
                 {/* End divider */}
 
                 <h4 className="heading-title" style={{ fontSize: 20 }}>
-                  {/* <CountUp delay={1} end={visitor} /> */}
-                  {visitor ? visitor : `0`} <i>x &nbsp;Dilihat</i>
+                  <CountUp delay={1} end={visitor} /> Orang
+                  {/* {visitor ? visitor : `0`} <i> &nbsp;Orang</i> */}
                 </h4>
               </div>
               {/* End heading */}

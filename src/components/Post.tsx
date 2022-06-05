@@ -19,7 +19,7 @@ export default function Post() {
   const getPost = async () => {
     let res: any = await getAllPost();
 
-    if (res) {
+    if (res) {      
       setPost(res);
     }
   };

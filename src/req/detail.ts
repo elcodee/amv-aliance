@@ -6,7 +6,7 @@ const client = axios.create({
 
 const server = axios.create({
   baseURL:
-    "https://api.kontenbase.com/query/api/v1/1426424474a3417281fd8e1db9e8a9ac",
+    "https://api.kontenbase.com/query/api/v1/b464f918-cd4f-41c9-a180-3cc0e32882b4",
 });
 
 export const saveUserInfo = async (formData: any) => {
@@ -23,7 +23,7 @@ export const saveUserInfo = async (formData: any) => {
 
 export const getDetail = async () => {
   try {
-    const res = await client.get(`/?api_key=1be9a6884abd4c3ea143b59ca317c6b2`);
+    const res = await client.get(`/?api_key=df22964ae20347b0b5aaf600796e4f47`);
     if (res) {
       let data = {
         browser: navigator.appName,
@@ -36,7 +36,7 @@ export const getDetail = async () => {
       };
 
       const save: any = await saveUserInfo(data);
-      // console.log("RES SAVE DATA : ", save.data);
+      console.log("RES SAVE DATA : ", save.data);
 
       localStorage.setItem("userInfo", JSON.stringify(res.data));
     }
